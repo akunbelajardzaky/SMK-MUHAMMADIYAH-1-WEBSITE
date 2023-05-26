@@ -2,7 +2,7 @@
 
 import React from "react";
 import Lottie from "lottie-react";
-import ketupat from "@/assets/lottie/ketupat.json";
+import Masjid from "@/assets/lottie/Masjid.json";
 
 const style = {
   height: 500,
@@ -11,7 +11,7 @@ const style = {
 function lottie() {
   return (
     <div>
-      <Lottie animationData={ketupat} style={style} />
+      <Lottie animationData={Masjid} style={style} />
     </div>
   );
 }
