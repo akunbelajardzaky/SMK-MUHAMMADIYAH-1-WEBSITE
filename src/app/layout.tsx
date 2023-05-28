@@ -1,10 +1,4 @@
 import "./globals.css";
-import { Cinzel_Decorative } from "next/font/google";
-
-const font = Cinzel_Decorative({
-  weight: "400",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: "Create Next App",
@@ -18,9 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <div className="mt-4 mr-10 ml-10 flex  justify-between mb-19">
-        <body>{children}</body>
-      </div>
+      <body>{children} </body>
     </html>
   );
 }

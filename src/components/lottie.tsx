@@ -11,7 +11,13 @@ const style = {
 function lottie() {
   return (
     <div>
-      <Lottie animationData={Masjid} style={style} />
+      <Lottie
+        animationData={Masjid}
+        style={style}
+        width={367}
+        height={197}
+        alt="Info kajian jogjakarta"
+      />
     </div>
   );
 }
