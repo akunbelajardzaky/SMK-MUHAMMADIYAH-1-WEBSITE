@@ -1,34 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## InfoKajianJogja
+InfoKajianJogja is a website that provides information about study opportunities in Yogyakarta. The website is built using Next.js 13 and Sanity.
 
-## Getting Started
 
-First, run the development server:
+Features
+List of study opportunities in Yogyakarta
+Information about each study opportunity, including the location, cost, and contact information
+Ability to filter study opportunities by location, cost, and type
+Ability to save study opportunities to a list
+Ability to contact study providers
+Getting Started
+To get started with InfoKajianJogja, you will need to:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Install Node.js and npm
+Clone the repository
+Install the dependencies
+Run the development server
+Here are some additional information about the website:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The website is currently in development, but it is already possible to find a list of study opportunities in Yogyakarta.
+The website is open source, so anyone can contribute to it.
+If you have any questions or suggestions, please feel free to contact the developers.
