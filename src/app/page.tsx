@@ -1,9 +1,15 @@
-import React from 'react'
-
+import React from "react";
+import Hero from "@/components/Carousel";
+import Blog from "@/components/Blog";
 function page() {
   return (
-    <div>page</div>
-  )
+    <>
+      <div className="mt-10">
+        <Hero />
+        <Blog />
+      </div>
+    </>
+  );
 }
 
-export default page
+export default page;

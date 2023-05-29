@@ -60,7 +60,7 @@ export default function Navbar() {
             fontFamily={"heading"}
             color={useColorModeValue("gray.800", "white")}
           >
-            Logo
+            SMK Muhammadiyah 1
           </Text>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
@@ -82,20 +82,6 @@ export default function Navbar() {
             href={"#"}
           >
             Sign In
-          </Button>
-          <Button
-            as={"a"}
-            display={{ base: "none", md: "inline-flex" }}
-            fontSize={"sm"}
-            fontWeight={600}
-            color={"white"}
-            bg={"pink.400"}
-            href={"#"}
-            _hover={{
-              bg: "pink.300",
-            }}
-          >
-            Sign Up
           </Button>
         </Stack>
       </Flex>
@@ -269,12 +255,12 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: "Inspiration",
+    label: "Tentang sekolah",
     children: [
       {
-        label: "Explore Design Work",
+        label: "Sejarah",
         subLabel: "Trending Design to inspire you",
-        href: "#",
+        href: "/sejarah",
       },
       {
         label: "New & Noteworthy",
