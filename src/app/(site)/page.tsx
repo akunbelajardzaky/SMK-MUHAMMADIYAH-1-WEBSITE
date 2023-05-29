@@ -6,7 +6,6 @@ function page() {
     <>
       <div className="mt-10">
         <Hero />
-        <Blog />
       </div>
     </>
   );

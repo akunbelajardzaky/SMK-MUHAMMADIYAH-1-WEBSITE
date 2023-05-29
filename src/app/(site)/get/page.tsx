@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getProjects } from "../../../sanity/sanity-utils";
+import { getProjects } from "../../../../sanity/sanity-utils";
 
 export default async function Home() {
   const project = await getProjects();

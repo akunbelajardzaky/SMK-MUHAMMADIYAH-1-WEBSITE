@@ -1,5 +1,5 @@
 import { PortableTextInput } from "sanity";
-import { getProject } from "../../../../sanity/sanity-utils";
+import { getProject } from "../../../../../sanity/sanity-utils";
 import Image from "next/image";
 import { PortableText } from "@portabletext/react";
 
