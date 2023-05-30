@@ -1,120 +1,94 @@
-"use client"
+"use client";
 
 import {
-    createStyles,
-    Menu,
-    Center,
-    Header,
-    Container,
-    Group,
-    Button,
-    Burger,
-    rem,
-  } from '@mantine/core';
-  import { useDisclosure } from '@mantine/hooks';
-  import { IconChevronDown } from '@tabler/icons-react';
-  import { MantineLogo } from '@mantine/ds';
-  
-  const HEADER_HEIGHT = rem(60);
-  
-  const useStyles = createStyles((theme) => ({
-    inner: {
-      height: HEADER_HEIGHT,
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
+  createStyles,
+  Card,
+  Text,
+  SimpleGrid,
+  UnstyledButton,
+  Anchor,
+  Group,
+  rem,
+} from "@mantine/core";
+import {
+  IconCreditCard,
+  IconBuildingBank,
+  IconRepeat,
+  IconReceiptRefund,
+  IconReceipt,
+  IconReceiptTax,
+  IconReport,
+  IconCashBanknote,
+  IconCoin,
+} from "@tabler/icons-react";
+
+const mockdata = [
+  { title: "Credit cards", icon: IconCreditCard, color: "violet" },
+  { title: "Banks nearby", icon: IconBuildingBank, color: "indigo" },
+  { title: "Transfers", icon: IconRepeat, color: "blue" },
+  { title: "Refunds", icon: IconReceiptRefund, color: "green" },
+  { title: "Receipts", icon: IconReceipt, color: "teal" },
+  { title: "Taxes", icon: IconReceiptTax, color: "cyan" },
+  { title: "Reports", icon: IconReport, color: "pink" },
+  { title: "Payments", icon: IconCoin, color: "red" },
+  { title: "Cashback", icon: IconCashBanknote, color: "orange" },
+];
+
+const useStyles = createStyles((theme) => ({
+  card: {
+    backgroundColor:
+      theme.colorScheme === "dark"
+        ? theme.colors.dark[6]
+        : theme.colors.gray[0],
+  },
+
+  title: {
+    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    fontWeight: 700,
+  },
+
+  item: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+    borderRadius: theme.radius.md,
+    height: rem(90),
+    backgroundColor:
+      theme.colorScheme === "dark" ? theme.colors.dark[7] : theme.white,
+    transition: "box-shadow 150ms ease, transform 100ms ease",
+
+    "&:hover": {
+      boxShadow: theme.shadows.md,
+      transform: "scale(1.05)",
     },
-  
-    links: {
-      [theme.fn.smallerThan('sm')]: {
-        display: 'none',
-      },
-    },
-  
-    burger: {
-      [theme.fn.largerThan('sm')]: {
-        display: 'none',
-      },
-    },
-  
-    link: {
-      display: 'block',
-      lineHeight: 1,
-      padding: `${rem(8)} ${rem(12)}`,
-      borderRadius: theme.radius.sm,
-      textDecoration: 'none',
-      color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
-      fontSize: theme.fontSizes.sm,
-      fontWeight: 500,
-  
-      '&:hover': {
-        backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
-      },
-    },
-  
-    linkLabel: {
-      marginRight: rem(5),
-    },
-  }));
-  
-  interface HeaderActionProps {
-    links: { link: string; label: string; links: { link: string; label: string }[] }[];
-  }
-  
-  export function HeaderAction({ links }: HeaderActionProps) {
-    const { classes } = useStyles();
-    const [opened, { toggle }] = useDisclosure(false);
-    const items = links.map((link) => {
-      const menuItems = link.links?.map((item) => (
-        <Menu.Item key={item.link}>{item.label}</Menu.Item>
-      ));
-  
-      if (menuItems) {
-        return (
-          <Menu key={link.label} trigger="hover" transitionProps={{ exitDuration: 0 }} withinPortal>
-            <Menu.Target>
-              <a
-                href={link.link}
-                className={classes.link}
-                onClick={(event) => event.preventDefault()}
-              >
-                <Center>
-                  <span className={classes.linkLabel}>{link.label}</span>
-                  <IconChevronDown size={rem(12)} stroke={1.5} />
-                </Center>
-              </a>
-            </Menu.Target>
-            <Menu.Dropdown>{menuItems}</Menu.Dropdown>
-          </Menu>
-        );
-      }
-  
-      return (
-        <a
-          key={link.label}
-          href={link.link}
-          className={classes.link}
-          onClick={(event) => event.preventDefault()}
-        >
-          {link.label}
-        </a>
-      );
-    });
-  
-    return (
-      <Header height={HEADER_HEIGHT} sx={{ borderBottom: 0 }} mb={120}>
-        <Container className={classes.inner} fluid>
-          <Group>
-            <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" />
-            <MantineLogo size={28} />
-          </Group>
-          <Group spacing={5} className={classes.links}>
-            {items}
-          </Group>
-          <Button radius="xl" h={30}>
-            Get early access
-          </Button>
-        </Container>
-      </Header>
-    );
-  }
+  },
+}));
+
+export function ActionsGrid() {
+  const { classes, theme } = useStyles();
+
+  const items = mockdata.map((item) => (
+    <UnstyledButton key={item.title} className={classes.item}>
+      <item.icon color={theme.colors[item.color][6]} size="2rem" />
+      <Text size="xs" mt={7}>
+        {item.title}
+      </Text>
+    </UnstyledButton>
+  ));
+
+  return (
+    <Card withBorder radius="md" className={classes.card}>
+      <Group position="apart">
+        <Text className={classes.title}>Services</Text>
+        <Anchor size="xs" color="dimmed" sx={{ lineHeight: 1 }}>
+          + 21 other services
+        </Anchor>
+      </Group>
+      <SimpleGrid cols={3} mt="md">
+        {items}
+      </SimpleGrid>
+    </Card>
+  );
+}
