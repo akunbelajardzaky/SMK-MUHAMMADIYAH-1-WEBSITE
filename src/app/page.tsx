@@ -1,12 +1,13 @@
 import React from "react";
-import { ActionsGrid } from "../components/Navbar";
+import { HeroBullets } from "./Hero";
+import Naa from "../components/Navbar/Navbar";
 
 const page = () => {
   return (
-    <div>
-      <ActionsGrid />
-      xwxw
-    </div>
+    <>
+      <Naa />
+      <HeroBullets />
+    </>
   );
 };
 
