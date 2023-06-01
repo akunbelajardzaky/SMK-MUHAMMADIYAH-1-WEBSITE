@@ -1,12 +1,13 @@
 import React from "react";
+import Navbar from "../components/Navbar/Page";
 import { HeroBullets } from "./Hero";
-import Naa from "../components/Navbar/Navbar";
-
+import Home from "../components/blog/Page";
 const page = () => {
   return (
     <>
-      <Naa />
+      <Navbar />
       <HeroBullets />
+      <Home />
     </>
   );
 };

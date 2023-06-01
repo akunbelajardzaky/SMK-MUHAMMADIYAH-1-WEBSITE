@@ -2,7 +2,7 @@
 
 import { Navbar, Button, Link, Text } from "@nextui-org/react";
 import { Layout } from "./Layout";
-// import { AcmeLogo } from "./Logo";
+import { AcmeLogo } from "./Logo";
 
 export default function App() {
   return (
