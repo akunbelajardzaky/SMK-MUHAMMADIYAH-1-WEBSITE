@@ -45,5 +45,3 @@ export default async function Home() {
     </div>
   );
 }
-
-//https://youtu.be/OcTPaUfay5I?t=3276

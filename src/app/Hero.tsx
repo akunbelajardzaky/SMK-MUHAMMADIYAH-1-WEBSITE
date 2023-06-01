@@ -81,21 +81,20 @@ export function HeroBullets() {
               SMK Muhammdiyah 1 yogyakarta
             </Title>
             <Text color="dimmed" mt="md">
-              Katanya sekolahnya anak IT 👨‍💻👨‍💻👨‍💻👨‍💻👨‍💻
+              Sekolah Teknologi Informasi, Seni dan Bisnis
             </Text>
 
             <Group mt={30}>
-              <Button radius="xl" size="md" className="bg-[#1c7ed6]">
-                Daftar PPDB 2023
-              </Button>
-              <Button
-                variant="default"
-                radius="xl"
-                size="md"
-                className={classes.control}
-              >
-                Lihat Hasil PPDB
-              </Button>
+              <a href="http://ppdb.smkmuh1-yog.sch.id">
+                <Button
+                  variant="default"
+                  radius="xl"
+                  size="md"
+                  className={classes.control}
+                >
+                  Daftar PPDB
+                </Button>
+              </a>
             </Group>
           </div>
           <Image src={image.src} className={classes.image} />
