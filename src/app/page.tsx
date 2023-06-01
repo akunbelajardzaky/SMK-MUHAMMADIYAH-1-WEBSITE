@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar/App";
 import { HeroBullets } from "./Hero";
-import Blog from "./blog";
 import Statistic from "../components/stats/app";
 import Fotter from "../components/fotter/app";
 
