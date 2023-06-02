@@ -5,7 +5,7 @@ import schemas from "./sanity/schemas";
 const config = defineConfig({
   projectId: "0kuojqyo",
   dataset: "production",
-  title: "SMK KOK KERE",
+  title: "SMK MUHAMMADIYAH 1",
   apiVersion: "2023-05-28",
   basePath: "/admin",
   plugins: [deskTool()],
