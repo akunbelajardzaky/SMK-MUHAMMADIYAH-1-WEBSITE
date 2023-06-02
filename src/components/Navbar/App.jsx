@@ -29,21 +29,16 @@ function App() {
             class="menu menu-sm dropdown-content mt-3 p-2 shadow bg-white font-semibold rounded-box w-52"
           >
             <li>
-              <a>Item 1</a>
+              <a href="/profile">Profile</a>
             </li>
             <li>
-              <a>Parent</a>
-              <ul class="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
+              <a href="tentang-kami">Tentang kami</a>
             </li>
             <li>
-              <a>Item 3</a>
+              <a href="akademik">Akademik</a>
+            </li>
+            <li>
+              <a href="prestasi">Prestasi</a>
             </li>
           </ul>
         </div>
