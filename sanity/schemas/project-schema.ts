@@ -2,8 +2,8 @@ import { type } from "os";
 import { title } from "process";
 
 const project = {
-  name: "project",
-  title: "Projects",
+  name: "blog",
+  title: "Blog",
   type: "document",
   fields: [
     {
